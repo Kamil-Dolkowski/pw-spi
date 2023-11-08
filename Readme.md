@@ -45,3 +45,5 @@ git branch
 # usuwanie brancha
 git branch -d nazwa-brancha
 
+# polaczenie z github
+git remote add origin "link http"
