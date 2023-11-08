@@ -8,12 +8,12 @@ git init
 # klonowanie repo
 git clone
 # tworzy nowy katalog 
-git close https://
+git clone https://
 
 # klon do aktualnego katalogu 
-git close https:// .
+git clone https:// .
 
-git close https:// /nowy-katalog
+git clone https:// /nowy-katalog
 
 # dodanie pliku do staging
 git add nazwa-pliku
