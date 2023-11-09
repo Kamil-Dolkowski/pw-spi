@@ -73,4 +73,6 @@ git diff            (changes)
 
 git log
 
-aaa
+# usuwanie zmian
+git reset HEAD Readme.md
+git checkout -- Readme.md
