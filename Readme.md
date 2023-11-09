@@ -2,6 +2,9 @@
 git config --local user.name ""
 git config --local user.email ""
 
+git config --global user.name ""
+git config --global user.email ""
+
 # nowe repo
 git init
 
@@ -17,14 +20,18 @@ git clone https:// /nowy-katalog
 
 # dodanie pliku do staging
 git add nazwa-pliku
-git add *   (wszystkie)
-git add .   (aktualny katalog)
+git add *       (wszystkie)
+git add *.py    (wszystkie z końcówką .py)
+git add .       (aktualny katalog)
+git add Readme.md index.html
+git add -h  (?help)
 
 # komitowanie zmian
 git commit -m"zmiany"
 
 # status zmian
 git status
+git status -s
 
 # pobranie wszystkich zmian z repo
 git fetch
@@ -48,4 +55,14 @@ git branch -d nazwa-brancha
 # polaczenie z github
 git remote add origin "link http"
 
-aaa
+# gdzie jest .gitconfig
+git config --list --show-origin
+
+git config --global core.editor emacs ("'C:// ")
+
+# ustawienie brancha default
+git config --global init.defaultBranch main
+git config --global init.defaultBranch master
+
+
+git help config
