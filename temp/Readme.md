@@ -66,3 +66,9 @@ git config --global init.defaultBranch master
 
 
 git help config
+
+# git diff
+git diff --staged   (staged_changes)
+git diff            (changes)
+
+git log
