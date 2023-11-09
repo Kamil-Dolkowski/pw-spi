@@ -76,3 +76,46 @@ git log
 # usuwanie zmian
 git reset HEAD Readme.md
 git checkout -- Readme.md
+
+# add, mod, delete remote url
+git remote -v
+
+git remote add test https://github.com/Kamil-Dolkowski/test.git
+
+# .gitignore  -  strona do generowania .gitignore
+https://www.toptal.com/developers/gitignore/
+
+# fork - pobieranie rezpozytorium do siebie do własnego użytku, nie zmieniając oryginału
+
+# git remote
+git remote -v
+git remote show origin
+git remote rename test test2
+git remote remove test2
+
+# tagi
+git tag
+git tag -a v1.3 -m"Fix poprawy wydajnosci"
+git push origin --tags
+git tag -d v1.3 (usuwanie)
+
+# wersjonowanie semantyczne
+https://semver.org/lang/pl/
+
+# aliasy
+
+# branche
+git branch
+git branch nowy
+git checkout -b nowy2
+
+# folders
+feature, refactor, bugfix, hotfix, release
+
+git branch feature/1-dodanie-strony
+git branch feature/2-dodanie-footer
+git branch feature/3-kontakty
+
+
+
+
