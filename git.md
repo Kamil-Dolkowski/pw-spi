@@ -60,21 +60,27 @@ git status --show-stash (pokazuje pliki, które są w stashu)
 
 # git pull
 
-git pull origin
+git pull origin (wszystkie zmiany)
 
-git pull origin dev
+git pull origin dev (zmiany z brancha dev)
 
-git pull --verbose
+git pull --verbose  (analizuje co pobiera)
+
+    (git pull origin dev --verbose)
 
 git pull --dry-run  (symuluje git pull'a, do sprawdzania połączenia)
 
-git pull --no-commit origin feature (pobierze zmiany, ale nie w formie commitu) (feature = branch?)
+git pull --no-commit origin feature (pobierze zmiany, ale nie w formie commitu) (feature = branch?) 
+
+    (git pull origin dev --no-commit)
+
+git pull --rebase origin dev (pobierze zmiany i wrzuci jako 1 commit)
 
 # git remote
 
 git remote -v   (wyświetlanie listy połączonych repozytoriów)
 
-git remote add [nazwa] [url]    (dodanie nowego repozytorium)
+git remote add [nazwa] [url]    (dodanie nowego zdalnego repozytorium)
 
 git remote rm [shortname]   (usuwanie)
 
@@ -84,13 +90,15 @@ git remote show [shortname] (pokazuje informacje o danym repozytorium)
 
 git remote update   (aktualizuje wszystkie repozytoria)
 
-git remote set-url [shortname] [new-url]
+git remote set-url [shortname] [new-url]    (zmiana url)
 
 git remote set-head [shortname] -a
 
 # git push
 
-git push [nazwa repozytorium]
+git push [nazwa repozytorium]   ?
+
+git push [nazwa-brancha]
 
 # git config 
 
@@ -114,6 +122,8 @@ git config --global alias.st 'status'
 git config --global core.autocrlf [true|false|input]    (zmienia znak końcowy linii? (\n) )
 
 git config --global core.ignorecase [true|false]
+
+(^ (w przypadku) warning: In the wroking copy of '' (po git add .) )
 
 git config --global merge.tool [tool]
 
@@ -181,11 +191,13 @@ git branch --force [branch-name]    (wymuszenie)
 
 git branch --color  (kolory w wyświetlaniu gałęzi)
 
+        /? git branch --set -upstream-to-origin/main dev ?/
+
 # git checkout  (przełączanie pomiędzy branchami; do prac, zmian na danym branchu)
 
 git checkout [branch-name]  (zmiana brancha)
 
-git checkout -b [branch-name]   
+git checkout -b [branch-name]   (tworzy i zmienia na utworzonego brancha)
 
 git checkout [commit-hash]  
 
@@ -231,7 +243,7 @@ git tag -a [tag-name] [commit-hash] -m "[message]"
 
 git reset [file]    (ze stageingu)
 
-git reset (resetuje obszar do ostatniego commita, wycofuje zmiany ze stageingu)
+git reset   (resetuje obszar do ostatniego commita, wycofuje zmiany ze stageingu)
 
 git reset --soft [commit]
 
@@ -247,6 +259,34 @@ soft vs hard
 
 
 
+# git stash     (tymczasowo odkłada wprowadzone zmiany, na później)
+
+git stash pop       (przywraca z powrotem)
+
+git stash list
+
+git stash clear
+
+git stash drop [nazwa-brancha?]
+
+    \? git stash ?   (przywracanie zmian, ale nieusuwanie ich ze stosu (stashu) )  ? \?
+
+git stash show [nazwa]
+
+
+# git fetch     (zawsze przed pracą!!!)
+
+git fetch origin [nazwa-brancha]
+
+(git fetch origin main)
+
+git fetch --tags 
+
+git fetch --all     (wszystkie zmiany ze zdalnych repozytoriów)
+
+git fetch origin
+
+git fetch --prune   (pobiera wszystkie informacje o zdalnych repozytoriach, odcięcie się od głównej gałęzi)
 
 
 
@@ -256,6 +296,35 @@ soft vs hard
 
 
 
+
+
+
+
+
+
+
+
+
+
+# ---------------------PRZYSZLY TYDZIEN--------------------
+
+wt. - Python (Kolokwium)    8:00
+śro - Python (wykład)
+czw - Git  (Kolokwium) (kartki lub kahoot)  8:00
+
+# ---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+*multi-repo
 
 
 
