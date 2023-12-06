@@ -289,15 +289,91 @@ git fetch origin
 git fetch --prune   (pobiera wszystkie informacje o zdalnych repozytoriach, odcięcie się od głównej gałęzi)
 
 
+# git log   (pokazuje wszystkie commity)
+
+git log -n 3
+
+git log -n 3 --oneline
+
+git log -n 3 --graph
+
+git log --since="3 day ego"
+
+git log --since="3 day ego" > log.txt
+
+git log.txt
+
+git log --author="[nazwa]"
+
+git log --grep="add"
+
+git log Raedme.md   (logi dla tego pliku)
+
+git log --help
+
+git log --after="2023-11-01" --before="2023-12-01"
+
+# git diff      (wyświetla zmiany w plikach)
+
+git diff --staged       (wyrzuca zmiany w plikach w staged)
+
+git diff [skrócona-nazwa-commita1] [skrócona-nazwa-commita2]    (porównanie 2 commitów)
+
+    (git diff 6e5688e 73huf32)
+
+git diff [nazwa-branch] [nazwa-brancha]     (porównanie 2 branchy)
+
+    (git diff main dev)
+
+git diff [skrócona-nazwa-commita1] [skrócona-nazwa-commita2] --name-only       (lista zmian w plikach)
+
+git diff [skrócona-nazwa-commita] -- [nazwa-pliku]      (zmiany w danym pliku w danym commitcie)
+
+    (git diff 6hv46d -- kod.py)
+
+git diff dev    [porównanie z innym branchem]
+
+git diff dev --stat     (statystyki)
+
+# git revert    (wycofanie, odrzucenie zmian przez dodanie commita) (nadpisanie commita)
+
+git revert 4hdf6sj 
+
+git revert HEAD     (wycofuje zmiany z ostatniego commita)
+
+git revert 4hdf6sj --no-commit
+
+
+git revert --abord ?
+
+
+git reset --hard HEAD~1
+
+git reset --soft HEAD~1
 
 
 
 
+# git merge [z-nazwa-brancha] [do-nazwa-brancha]
+
+git merge origin/dev    (z repo zdalnego mimo lokalnych plików)
+
+git merge origin/dev --squash   (nieważne, ile commitów -> do 1 commitu)
+
+git merge origin/dev --ff-only  
+
+git merge origin/dev ----strategy-option ours   (nasze są ważniejsze niż inne)
+
+git merge origin/dev ----strategy-option theirs (inne ważniejsze niż nasze)
+
+git merge origin/dev ----strategy-option patience
+
+git merge --abort       (przerwanie merge'a)
 
 
+# git cherry-pick 9h47df
 
-
-
+git cherry-pick --continue ( ? )
 
 
 
