@@ -344,7 +344,7 @@ git revert HEAD     (wycofuje zmiany z ostatniego commita)
 git revert 4hdf6sj --no-commit
 
 
-git revert --abord ?
+git revert --abort
 
 
 git reset --hard HEAD~1
