@@ -1,5 +1,7 @@
 # książka "Bezpieczeńswto aplikacji webowych"
 
+# książka "Wstęp do bezpieczeństwa IT"
+
 # Typy ataków hakerskich:
 
 -DDos       (masowy atak na serwer, obciąża i często wyłącza serwer)
